@@ -45,16 +45,18 @@ class Service {
   }
 
   create (body, params, cb) {
-    const { uri } = body;
+    const { key, uri } = body;
+    const options = Object.assign({}, body);
     const { buffer, MIME: contentType } = parseDataURI(uri);
-    const hash = bufferToHash(buffer);
-    const ext = mimeTypes.extension(contentType);
-    const id = `${hash}.${ext}`;
+    const hash = key ? null : bufferToHash(buffer);
+    const ext = key ? null : mimeTypes.extension(contentType);
+    const id = key ? key : `${hash}.${ext}`;
+
+    delete options.uri;
+    options.key = key || id;
 
     fromBuffer(buffer)
-    .pipe(this.Model.createWriteStream({
-      key: id
-    }, function () {
+    .pipe(this.Model.createWriteStream(options, function () {
       cb(null, {
         [this.id]: id,
         uri,
