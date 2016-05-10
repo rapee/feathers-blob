@@ -1,7 +1,7 @@
 {
   "name": "bb-feathers-blob",
   "description": "Feathers blob service",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "homepage": "https://github.com/rapee/feathers-blob",
   "main": "lib/",
   "keywords": [
