@@ -1,8 +1,8 @@
 {
   "name": "feathers-blob",
   "description": "Feathers blob service",
-  "version": "1.0.6",
-  "homepage": "https://github.com/feathersjs/feathers-blob",
+  "version": "1.0.5",
+  "homepage": "https://github.com/rapee/feathers-blob",
   "main": "lib/",
   "keywords": [
     "feathers",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feathersjs/feathers-blob.git"
+    "url": "git://github.com/rapee/feathers-blob.git"
   },
   "author": {
     "name": "Feathers contributors",
@@ -27,7 +27,7 @@
   },
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/feathersjs/feathers-blob/issues"
+    "url": "https://github.com/rapee/feathers-blob/issues"
   },
   "engines": {
     "node": ">= 0.12.0"
